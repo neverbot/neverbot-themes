@@ -37,8 +37,8 @@
 			  using <a href="http://www.anchorcms.com/">Anchor</a>
 			</div>
 			<div>
-        <a href="http://feeds.feedburner.com/neverbot">rss</a> | 
-        <a href="http://twitter.com/neverbot">@neverbot</a>
+        <a href="http://feeds.feedburner.com/neverbot"><i class="fa fa-rss-square"></i> rss</a> | 
+        <a href="http://twitter.com/neverbot"><i class="fa fa-twitter"></i> @neverbot</a>
 			</div>
 			<div>
 			  4 8 15 16 23 42
