@@ -54,12 +54,14 @@
 
           <!-- Collect the nav links, forms, and other content for toggling -->
           <div class="collapse navbar-collapse" id="collapsed-nav-menu">
-            <form class="navbar-form navbar-right" role="search">
+
+            <form class="navbar-form navbar-right" role="search" id="search" action="<?php echo search_url(); ?>" method="post">
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="buscar">
+                <input type="text" class="form-control" id="term" name="term" placeholder="Buscar&hellip;" value="<?php echo search_term(); ?>">
               </div>
-              <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+                <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
             </form>
+
           </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
       </nav>
