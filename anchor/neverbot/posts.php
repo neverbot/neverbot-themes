@@ -38,7 +38,7 @@
     <?php endif; ?>
 
   <?php else: ?>
-    <p>Looks like you have some writing to do!</p>
+    <p>¡Aquí no hay nada!</p>
   <?php endif; ?>
 
 </section>

@@ -7,9 +7,6 @@
   Author URI: http://neverbot.com
 */
 
-/* global */
-
-
 /* header */
 
 /* navigation bar */
@@ -24,7 +21,8 @@
 
 /* logo */
 .nb-head {
-  width: 100%;
+  width: 80%;
+  margin: 20px auto;  
   height: 330px;
   background: url('../img/background_header.gif') no-repeat top center;
   margin: 0px auto 0px auto; 
@@ -52,10 +50,10 @@
 }
 
 /* post */
-article {
+article, .nb-post {
   font: 18px georgia;
-	color: #333;
-	background-color: #fff;  
+  color: #333;
+  background-color: #fff;  
   line-height: 1.5em;
   width: 80%;
   margin: 20px auto;  
@@ -65,8 +63,8 @@ article {
   max-width: 1000px;
 }
   article a {
-    border-bottom: 1px solid rgba(255, 102, 153, 0.7);
-    box-shadow: inset 0 -4px 0 rgba(255, 102, 153, 0.7);
+    border-bottom: 1px solid rgba(255, 102, 153, 0.5);
+    box-shadow: inset 0 -4px 0 rgba(255, 102, 153, 0.5);
     color: inherit;
   }
     /* not in linked images */
@@ -130,22 +128,22 @@ article {
 
 /* pagination */
 .nb-pagination {
-	background-color: #fff;  
+  background-color: #fff;  
   line-height: 1.5em;
   width: 80%;
   margin: 20px auto;    
   padding: 20px;
   max-width: 1000px;    
 }
-	.nb-pagination a {
-	  font: 18px georgia;  
-	  font-weight: bold;
-		color: #333;
-		text-decoration: underline;
-	}
-	.nb-pagination a:hover {
-		text-decoration: none;
-	}
+  .nb-pagination a {
+    font: 18px georgia;  
+    font-weight: bold;
+    color: #333;
+    text-decoration: underline;
+  }
+  .nb-pagination a:hover {
+    text-decoration: none;
+  }
   .nb-pagination .previous {
     float: left;
   }
@@ -164,24 +162,24 @@ article {
   padding: 40px;
   max-width: 1000px;  
 }
-	.nb-footer i {
-		padding: 0 5px;
-	}
-	.nb-footer img {
+  .nb-footer i {
+    padding: 0 5px;
+  }
+  .nb-footer img {
     margin: 5px;
     padding: 3px;
-    border: 1px solid #8D8D8D;   		
-	}
-	.nb-footer ul {
-	  /* padding: 20px 0 0 20px; */
-	}
-	.nb-footer li {
-	  list-style: none;
-	  padding: 0;		
-	}
+    border: 1px solid #8D8D8D;       
+  }
+  .nb-footer ul {
+    /* padding: 20px 0 0 20px; */
+  }
+  .nb-footer li {
+    list-style: none;
+    padding: 0;    
+  }
   .nb-footer a {
-    border-bottom: 1px solid rgba(255, 102, 153, 0.7);
-    box-shadow: inset 0 -4px 0 rgba(255, 102, 153, 0.7);
+    border-bottom: 1px solid rgba(255, 102, 153, 0.5);
+    box-shadow: inset 0 -4px 0 rgba(255, 102, 153, 0.5);
     color: inherit;
   }
     .nb-footer a:hover {
@@ -208,15 +206,15 @@ article {
     float: left;
     width: 30%;
   }
-		.sidebar-left ul {
-		  padding: 20px 0 0 20px; 
-		}
-	  .sidebar-left li a {
-	    border-bottom: 0px;
-	    box-shadow: inherit;
-	  	text-decoration: underline;
-	    color: inherit;
-	  }
+    .sidebar-left ul {
+      padding: 20px 0 0 20px; 
+    }
+    .sidebar-left li a {
+      border-bottom: 0px;
+      box-shadow: inherit;
+      text-decoration: underline;
+      color: inherit;
+    }
 
   .sidebar-right {
     float: right;
@@ -224,25 +222,147 @@ article {
   }
 
 .nb-colophon {
-	font: 18px georgia;  
-	line-height: 1.5em;
+  font: 18px georgia;  
+  line-height: 1.5em;
   margin: 0px auto 0px auto;
   padding: 10px 0 50px 0;
   width: 1000px;
   text-align: center;
 }
-	.nb-colophon a {
-    border-bottom: 1px solid rgba(255, 102, 153, 0.7);
-    box-shadow: inset 0 -4px 0 rgba(255, 102, 153, 0.7);
+  .nb-colophon a {
+    border-bottom: 1px solid rgba(255, 102, 153, 0.5);
+    box-shadow: inset 0 -4px 0 rgba(255, 102, 153, 0.5);
     color: inherit;
-	}
-	.nb-colophon a:hover {
-		text-decoration: none;
+  }
+  .nb-colophon a:hover {
+    text-decoration: none;
     color: rgba(255, 102, 153, 0.7);
     border-bottom: 0px;
     box-shadow: inherit;  
-	}
+  }
 
+/* comment list */
+
+ul.commentlist {
+  margin-bottom: 40px;
+  padding: 0 30px;
+  list-style: none;
+}
+  ul.commentlist .wrap {
+    position: relative;
+  }
+  ul.commentlist li {
+    padding: 40px 0;
+    border-bottom: 1px solid rgba(22,36,54,.1);
+  }
+    ul.commentlist li header {
+      margin-bottom: 20px;
+    }
+    ul.commentlist small {
+      font-size: 0.9em;
+      line-height: 1.5em;
+      color: #777;
+    }
+      ul.commentlist small a {
+        color: inherit;
+      }
+      ul.commentlist small a:hover, 
+      ul.commentlist small a:active { 
+        text-decoration: none; 
+        color: rgb(255, 102, 153);
+      }    
+
+
+    ul.commentlist h2 {
+      font: 18px georgia;
+      font-weight: bold;
+      margin: 0px;
+    }
+      ul.commentlist h2 a:link, 
+      ul.commentlist h2 a:visited { 
+        text-decoration: underline; 
+        color: #333333;
+      }
+      ul.commentlist h2 a:hover, 
+      ul.commentlist h2 a:active { 
+        text-decoration: none; 
+        color: #333333;
+      }    
+    ul.commentlist .counter {
+      position: absolute;
+      right: 0;
+      top: 0;
+
+      font-size: 40px;
+      font-weight: 300;
+      color: #cdd2da;
+    }
+
+/* comment form, same styles as in the default anchor theme */
+
+#comment {
+  overflow: hidden;
+}
+  #comment label[for] {
+    display: none;
+  }
+  #comment p {
+    float: left;
+    width: 48%;
+    margin-right: 4%;
+    margin-bottom: 10px;
+
+    text-indent: 0;
+  }
+    #comment p + p {
+      margin-right: 0;
+    }
+    #comment p.textarea {
+      float: none;
+      width: 100%;
+    }
+  #comment input, #comment textarea {
+    width: 100%;
+    padding: 10px 15px;
+
+    font-size: 15px;
+    font-weight: normal;
+
+    border: 1px solid rgba(22,36,54,.2);
+    border-radius: 4px;
+  }
+   #comment input:focus, #comment textarea:focus {
+      outline: none;
+      background: #f7f9fc;
+    }
+    #comment textarea {
+      min-height: 150px;
+      max-height: 800px;
+      resize: vertical;
+    }
+  #comment button {
+    display: inline-block;
+    padding: 9px 18px;
+
+    background: rgb(255, 102, 153);
+    color: #fff;
+
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+    font: 18px georgia;
+  }
+    #comment button:hover {
+      background: rgb(206, 29, 88);
+    }
+
+
+/* global */
+
+.nb-center { text-align: center; }
+.nb-left { float: left; }
+.nb-right { float: right; }
 
 /* fonts */
 

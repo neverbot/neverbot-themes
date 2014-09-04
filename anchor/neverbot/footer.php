@@ -19,12 +19,7 @@
 
 		    <div class="sidebar-right">
 		    	<?php 
-						$page = Page::where('id', '=', '1')->get()[0];
-
-		        // register single post
-		        Registry::set('page', $page);
-
-		        echo page_content();
+		    		echo nb_get_page_content(1);
 		    	?>
 		    </div>			  
 	    </div>			  
@@ -37,8 +32,10 @@
 			  using <a href="http://www.anchorcms.com/">Anchor</a>
 			</div>
 			<div>
-        <a href="http://feeds.feedburner.com/neverbot"><i class="fa fa-rss-square"></i> rss</a> | 
-        <a href="http://twitter.com/neverbot"><i class="fa fa-twitter"></i> @neverbot</a>
+        <i class="fa fa-rss-square"></i> 
+        <a href="http://feeds.feedburner.com/neverbot">rss</a> | 
+        <i class="fa fa-twitter"></i> 
+        <a href="http://twitter.com/neverbot">@neverbot</a>
 			</div>
 			<div>
 			  4 8 15 16 23 42
