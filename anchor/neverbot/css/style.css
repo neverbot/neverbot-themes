@@ -344,7 +344,7 @@ ul.commentlist {
     display: inline-block;
     padding: 9px 18px;
 
-    background: rgb(255, 102, 153);
+    background: rgba(255, 102, 153, 0.7);
     color: #fff;
 
     border: none;
@@ -354,7 +354,7 @@ ul.commentlist {
     font: 18px georgia;
   }
     #comment button:hover {
-      background: rgb(206, 29, 88);
+      background: rgb(255, 102, 153);
     }
 
 
