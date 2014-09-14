@@ -1,31 +1,55 @@
 <?php theme_include('header'); ?>
 
-<h1 class="wrap">You searched for &ldquo;<?php echo search_term(); ?>&rdquo;.</h1>
+  <section class="nb-content">
 
-<?php if(has_search_results()): ?>
-	<ul class="items">
-		<?php $i = 0; while(search_results()): $i++; ?>
-		<li style="background: hsl(215,28%,<?php echo round((($i / posts_per_page()) * 20) + 20); ?>%);">
-			<article class="wrap">
-				<h2>
-					<a href="<?php echo article_url(); ?>" title="<?php echo article_title(); ?>"><?php echo article_title(); ?></a>
-				</h2>
-			</article>
-		</li>
-		<?php endwhile; ?>
-	</ul>
+    <article class="nb-post">
+      <header>
+          <h1>Has buscado &ldquo;<?php echo search_term(); ?>&rdquo;:</h1>
+      </header>
 
-	<?php if(has_pagination()): ?>
-	<nav class="pagination">
-		<div class="wrap">
-			<?php echo search_prev(); ?>
-			<?php echo search_next(); ?>
-		</div>
-	</nav>
-	<?php endif; ?>
+      <div class="content">
 
-<?php else: ?>
-	<p class="wrap">Unfortunately, there's no results for &ldquo;<?php echo search_term(); ?>&rdquo;. Did you spell everything correctly?</p>
-<?php endif; ?>
+      <?php if(has_search_results()): ?>
+        <ul class="nb-search-results">
+          <?php $i = 0; while(search_results()): $i++; ?>
+          <li>
+              <h2>
+                <i class="fa fa-caret-right"></i>&nbsp;&nbsp;
+                <a href="<?php echo article_url(); ?>" title="<?php echo article_title(); ?>"><?php echo article_title(); ?></a>
+              </h2>
+              <small><?php echo utf8_encode(strftime('%e de %B de %Y', article_time())); ?></small>
+          </li>
+          <?php endwhile; ?>
+        </ul>
+
+    <?php if(has_pagination()): ?>
+    <div class="container nb-pagination">
+      <div class="previous">
+        <?php echo search_prev('&larr; Más resultados'); ?>
+      </div>
+      <!-- 
+      <div class="next">
+        <?php echo search_next('Búsqueda anteriores &rarr;'); ?>        
+      </div>
+        -->  
+    </div>
+    
+    <?php endif; ?>
+
+      <?php else: ?>
+        
+        <p>
+          No se ha escrito nada aquí acerca de &ldquo;<?php echo search_term(); ?>&rdquo;.
+          <strong>Deja de buscar porno.</strong> 
+        </p>
+
+      <?php endif; ?>
+
+      </div>
+
+
+    </article>
+
+  </section>
 
 <?php theme_include('footer'); ?>

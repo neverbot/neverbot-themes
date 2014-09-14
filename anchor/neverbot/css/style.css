@@ -357,6 +357,24 @@ ul.commentlist {
       background: rgb(255, 102, 153);
     }
 
+/* search */
+
+.nb-search-results {
+}
+  .nb-search-results li {
+    margin-bottom: 20px;
+    list-style: none;
+  }
+  .nb-search-results h2 {
+    font: 18px georgia;  
+    margin: 0px;
+  }
+  .nb-search-results small {
+    margin-left: 20px;  
+  }
+
+
+
 
 /* global */
 
