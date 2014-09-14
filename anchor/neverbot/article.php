@@ -23,7 +23,7 @@
 
 	<?php if(comments_open()): ?>
 
-	<section class="nb-post comments">
+	<section class="nb-post comments" id="comments">
 
 		<?php if(has_comments()): ?>
 		<ul class="commentlist">

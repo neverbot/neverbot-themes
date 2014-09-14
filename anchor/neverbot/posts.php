@@ -19,7 +19,19 @@
           </div>
 
           <footer>
-            <small>Categoría: <a href="<?php echo article_category_url(); ?>"><?php echo article_category(); ?></a> | <a href="<?php echo article_url(); ?>">#</a></small>
+            <small>Categoría: <a href="<?php echo article_category_url(); ?>"><?php echo article_category(); ?></a> | 
+                  <a href="<?php echo article_url(); ?>">#</a>
+                  <?php if (($num = total_comments()) > 0) 
+                    {
+                      echo ' | <a href="'.article_url().'#comments">';
+                      if ($num == 1)
+                        echo 'Un comentario';
+                      else
+                        echo total_comments().' comentarios';
+                      echo '</a>';
+                    }
+                  ?>
+            </small>
           </footer>
         </article>
       </li>
