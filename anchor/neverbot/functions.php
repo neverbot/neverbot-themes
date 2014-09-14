@@ -22,6 +22,11 @@ function nb_article_number($id = 0) {
         where(Base::table('posts.id'), '<=', $id)->count();
 }
 
+// tmp fix
+function nb_article_total_comments() {
+  return Comment::where('post', '=', article_id())->count();
+}
+
 function nb_get_page_content($id = 1) {
   $page = Page::where('id', '=', "$id")->get();
 

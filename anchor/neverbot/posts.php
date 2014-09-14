@@ -21,13 +21,13 @@
           <footer>
             <small>Categoría: <a href="<?php echo article_category_url(); ?>"><?php echo article_category(); ?></a> | 
                   <a href="<?php echo article_url(); ?>">#</a>
-                  <?php if (($num = total_comments()) > 0) 
+                  <?php if (nb_article_total_comments() > 0) 
                     {
                       echo ' | <a href="'.article_url().'#comments">';
-                      if ($num == 1)
+                      if (nb_article_total_comments() == 1) 
                         echo 'Un comentario';
                       else
-                        echo total_comments().' comentarios';
+                        echo nb_article_total_comments().' comentarios';
                       echo '</a>';
                     }
                   ?>
