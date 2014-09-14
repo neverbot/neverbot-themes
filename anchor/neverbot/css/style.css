@@ -20,6 +20,11 @@
   .nb-navbar .navbar-form {
     border-top: none;
     border-bottom: none;
+    padding: 0;
+  }
+  .in .navbar-form,
+  .collapsing .navbar-form {
+    padding: 0 15px;
   }
 
 /* logo */

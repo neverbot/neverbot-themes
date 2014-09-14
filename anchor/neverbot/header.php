@@ -54,7 +54,7 @@
           <!-- Collect the nav links, forms, and other content for toggling -->
           <div class="collapse navbar-collapse" id="collapsed-nav-menu">
 
-            <div class="col-sm-3 col-md-3 pull-right">
+            <div class="pull-right">
               <form class="navbar-form" role="search" id="search" action="<?php echo search_url(); ?>" method="post">
                 <div class="input-group">
                   <input type="text" class="form-control" placeholder="Buscar&hellip;" value="<?php echo search_term(); ?>" name="term" id="term">
