@@ -1,8 +1,8 @@
 
     <footer class="nb-footer">
 
-		  <div class="sidebar-columns">
-		    <div class="sidebar-left">
+		  <div class="sidebar-columns ">
+		    <div class="sidebar-left col-sm-4 col-xs-12">
 		      <div><i class="fa fa-list-ul"></i>&nbsp;&nbsp;<strong>Categor&iacute;as:</strong></div>
 		      <ul>
 			      <?php $i = 0; while(categories()): ?>
@@ -17,7 +17,7 @@
 			    </ul>
 		    </div>
 
-		    <div class="sidebar-right">
+		    <div class="sidebar-right col-sm-8 col-xs-12">
 		    	<?php 
 		    		echo nb_get_page_content(1);
 		    	?>

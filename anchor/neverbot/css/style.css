@@ -13,10 +13,13 @@
 .nb-navbar button {
   width: 40px;
 }
-
   .nb-navbar .nb-logo {
     font-family: 'hamburguer_heaven', georgia, sans-serif;
     font-size: 20pt;  
+  }
+  .nb-navbar .navbar-form {
+    border-top: none;
+    border-bottom: none;
   }
 
 /* logo */
@@ -168,7 +171,15 @@ article, .nb-post {
   .nb-footer img {
     margin: 5px;
     padding: 3px;
-    border: 1px solid #8D8D8D;       
+    border: 1px solid #8D8D8D;   
+
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    margin: 5px;
+    padding: 3px;
+    border: 1px solid #8D8D8D;   
+
   }
   .nb-footer ul {
     /* padding: 20px 0 0 20px; */
@@ -203,8 +214,7 @@ article, .nb-post {
     width: 100%
   }
   .sidebar-left {
-    float: left;
-    width: 30%;
+    padding: 0;
   }
     .sidebar-left ul {
       padding: 20px 0 0 20px; 
@@ -217,16 +227,15 @@ article, .nb-post {
     }
 
   .sidebar-right {
-    float: right;
-    width: 70%;
+    padding: 0;
   }
 
 .nb-colophon {
   font: 18px georgia;  
   line-height: 1.5em;
   margin: 0px auto 0px auto;
-  padding: 10px 0 50px 0;
-  width: 1000px;
+  padding: 10px 50px 50px 50px;
+  width: 100%;
   text-align: center;
 }
   .nb-colophon a {
@@ -373,9 +382,6 @@ ul.commentlist {
     margin-left: 20px;  
   }
 
-
-
-
 /* global */
 
 .nb-center { text-align: center; }
@@ -389,4 +395,11 @@ ul.commentlist {
   src: url('../fonts/hamburguer_heaven.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
+}
+
+/* mobile fixes */
+
+@media (max-width: 767px){
+  .nb-post { width: 95%; }
+  .nb-footer { width: 95%; }
 }

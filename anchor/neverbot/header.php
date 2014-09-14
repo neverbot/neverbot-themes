@@ -5,7 +5,7 @@
     <title><?php echo page_title('Page can’t be found'); ?> - <?php echo site_name(); ?></title>
 
     <meta name="description" content="<?php echo site_description(); ?>">
-    <meta name="viewport" content="width=device-width">
+    <meta name='viewport' content='content="width=device-width, maximum-scale=1.0, minimum-scale=1.0, initial-scale=1.0' />
     <meta name="generator" content="Anchor CMS">
 
     <meta property="og:title" content="<?php echo site_name(); ?>">
@@ -24,7 +24,6 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-
     <link rel="stylesheet" href="<?php echo theme_url('/css/style.css'); ?>">
 
     <?php if(customised()): ?>
@@ -55,12 +54,16 @@
           <!-- Collect the nav links, forms, and other content for toggling -->
           <div class="collapse navbar-collapse" id="collapsed-nav-menu">
 
-            <form class="navbar-form navbar-right" role="search" id="search" action="<?php echo search_url(); ?>" method="post">
-              <div class="form-group">
-                <input type="text" class="form-control" id="term" name="term" placeholder="Buscar&hellip;" value="<?php echo search_term(); ?>">
-              </div>
-                <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
-            </form>
+            <div class="col-sm-3 col-md-3 pull-right">
+              <form class="navbar-form" role="search" id="search" action="<?php echo search_url(); ?>" method="post">
+                <div class="input-group">
+                  <input type="text" class="form-control" placeholder="Buscar&hellip;" value="<?php echo search_term(); ?>" name="term" id="term">
+                  <div class="input-group-btn">
+                      <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                  </div>
+                </div>
+              </form>
+            </div>
 
           </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
