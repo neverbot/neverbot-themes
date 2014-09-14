@@ -24,7 +24,9 @@ function nb_article_number($id = 0) {
 
 // tmp fix
 function nb_article_total_comments() {
-  return Comment::where('post', '=', article_id())->count();
+  return Comment::where('post', '=', article_id())
+          ->where('status', '=', 'approved')
+          ->count();
 }
 
 function nb_get_page_content($id = 1) {
