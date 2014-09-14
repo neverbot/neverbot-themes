@@ -1,9 +1,22 @@
 <?php theme_include('header'); ?>
 
-	<section class="content wrap">
-		<h1>Page not found</h1>
+ <section class="nb-content">
 
-		<p>Unfortunately, the page <code>/<?php echo htmlspecialchars(current_url()); ?></code> could not be found. Your best bet is either to try the <a href="<?php echo base_url(); ?>">homepage</a>, try <a href="#search">searching</a>, or go and cry in a corner (although I don’t recommend the latter).</p>
-	</section>
+    <article class="nb-post">
+      <header>
+        <h1>404, página no encontrada</h1>
+      </header>
+
+      <div class="content">
+        <p>Por desgracia, la página <code>/<?php echo htmlspecialchars(current_url()); ?></code> no se ha podido encontrar. 
+          Puedes volver a la <a href="<?php echo base_url(); ?>">página de inicio</a>, buscar lo que no has encontrado (la búsqueda
+          está arriba a la derecha), o llorar en una esquina.</p>
+        <p><strong>Deja de buscar porno.</strong></p>
+      </div>
+
+    </article>
+
+  </section>
+
 
 <?php theme_include('footer'); ?>
