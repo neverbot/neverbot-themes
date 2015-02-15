@@ -1,4 +1,4 @@
-neverbot-themes
+neverbot.com
 ===============
 
 Themes for neverbot.com
