@@ -10,7 +10,7 @@ $count = 1;
 
 if (have_posts()) : 
 
- // echo '<div id="google_ad">'.google_ad_code().'</div>';       
+ echo '<div id="google_ad">'.google_ad_code().'</div>';       
 
  while (have_posts()) : 
   the_post(); 
