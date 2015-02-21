@@ -8,27 +8,30 @@ get_header();
 if (have_posts()) : 
  while (have_posts()) : 
   the_post(); 
-
 ?>
 
-      <div class="post" id="post-<?php the_ID(); ?>">
-        <div class="titulo">
-          <a href="<?php the_permalink() ?>" rel="bookmark" title="Enlace permanente a <?php the_title(); ?>">
-           <?php the_title(); ?></a>
-         </div>
+  <article class="nb-post" id="post-<?php the_ID(); ?>">
+    <header>
+      <h1>
+        <a href="<?php the_permalink() ?>" rel="bookmark" title="Enlace permanente a <?php the_title(); ?>">
+         <?php the_title(); ?></a>
+      </h1>
+    </header>
 
-         <?php the_content('Lee el resto de este mensaje &raquo;'); ?>
+     <?php the_content('Lee el resto de este mensaje &raquo;'); ?>
 
-         <div class="foot">
-          <a href="<?php the_permalink() ?>" rel="bookmark" title="Enlace permanente">#</a>
-          <?php edit_post_link('Editar', ' | ', ''); ?>  
-        </div>
-      </div>
+     <footer>
+      <small>
+        <a href="<?php the_permalink() ?>" rel="bookmark" title="Enlace permanente">#</a>
+        <?php edit_post_link('Editar', ' | ', ''); ?>  
+      </small>
+    </footer>
+  </article>
 
-      <!-- Google ads -->
-      <?php echo '<div id="google_ad">'.google_ad_code().'</div>'; ?>
+  <!-- Google ads -->
+  <?php echo '<div id="google_ad">'.google_ad_code().'</div>'; ?>
 
-    </div> <!-- fin main -->
+  </section>
   
 <?php endwhile; else: ?>
 

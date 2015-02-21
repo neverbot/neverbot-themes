@@ -15,6 +15,13 @@
 
 <?php wp_head(); ?>
 
+<!-- jquery, bootstrap, fontawesome -->
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+
 <!-- Facebook and Open Graph -->
 <link rel="image_src" href="<?php bloginfo('template_directory'); ?>/images/name_for_opengraph.gif" />
 <meta property="og:image" content="<?php bloginfo('template_directory'); ?>/images/name_for_facebook.gif" />
@@ -28,11 +35,12 @@ include_once('nb_funcs.php');
 
 <body>
 
-<div class="header">
-  <div id="main_logo">
-    <div id="web_name" onclick="location.href='http://www.neverbot.com'"></div> 
-  </div> 
-</div>
+  <header>
+    <div class="nb-head hidden-xs">
+      <div class="nb-main-logo">
+        <a href="http://www.neverbot.com">neverbot</a>
+      </div> 
+    </div>
+  </header>
 
-<div class="page">
-    <div class="main">
+  <section class="nb-content">

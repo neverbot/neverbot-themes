@@ -5,11 +5,7 @@ include_once('nb_funcs.php');
 
 get_header();
 
-if ( is_home() ) {
-  query_posts($query_string . '&cat=-33');
-}
-
-$es_miniblog = false; 
+$is_miniblog = false; 
 $count = 1;
 
 if (have_posts()) : 
@@ -19,22 +15,24 @@ if (have_posts()) :
  while (have_posts()) : 
   the_post(); 
 
-  if (in_category(22) && !is_single()) 
+  if (in_category(21) && !is_single()) 
   {
-    if ($es_miniblog==false) 
+    if ($is_miniblog==false) 
     {
-      echo '<div class="post miniblog"><ul>';
-      $es_miniblog = true; 
+      echo '<article class="nb-post nb-miniblog"><ul>';
+      $is_miniblog = true; 
     } 
     ?>
 
     <li>
-      <div id="post-<?php the_ID(); ?>">
+      <div class="nb-minipost" id="post-<?php the_ID(); ?>">
         <?php echo wptexturize($post->post_content); ?>
-        <span class="foot">
-          <?php edit_post_link('(e)', '', ' | '); ?>  
-          <a href="<?php the_permalink() ?>" rel="bookmark" title="Enlace permanente a <?php the_title(); ?>">#</a>
-        </span>
+        <footer>
+          <small>
+            <?php edit_post_link('(e)', '', ' | '); ?>  
+            <a href="<?php the_permalink() ?>" rel="bookmark" title="Enlace permanente a <?php the_title(); ?>">#</a>
+          </small>
+        </footer>
       </div>
     </li>
 
@@ -42,40 +40,45 @@ if (have_posts()) :
   } 
   else 
   { 
-    if ($es_miniblog == true) 
+    if ($is_miniblog == true) 
     { 
-      $es_miniblog = false; 
-      echo '</ul></div>';
+      $is_miniblog = false; 
+      echo '</ul></article>';
       echo '<div id="google_ad">'.google_ad_code().'</div>';       
     } 
 
     ?>
 
-      <div class="post" id="post-<?php the_ID(); ?>">
+      <article class="nb-post" id="post-<?php the_ID(); ?>">
 
     <?php 
-          $title = get_the_title(); 
-          if (!empty($title)) 
-          { 
+      $title = get_the_title(); 
+      if (!empty($title)) 
+      { 
     ?>
+        <header>
+          <h1>
+            <a href="<?php the_permalink() ?>" rel="bookmark" title="Enlace permanente a <?php the_title(); ?>">
+             <?php the_title(); ?></a>
+          </h1>
+          <small>Publicado por <?php the_author_link() ?>, el <?php the_time('l j \d\e F \d\e Y') ?></small>
+        </header>
 
-        <div class="titulo">
-          <a href="<?php the_permalink() ?>" rel="bookmark" title="Enlace permanente a <?php the_title(); ?>">
-           <?php the_title(); ?></a>
-        </div>
-        <div class="fecha">Publicado por <?php the_author_link() ?>, el <?php the_time('l j \d\e F \d\e Y') ?>
-        </div>
-
-    <?php } ?>
+    <?php 
+      } 
+    ?>
 
          <?php the_content('Lee el resto de este mensaje &raquo;'); ?>
 
-         <div class="foot">
-          Categor&iacute;a: <?php the_category(', ') ?> | 
-          <a href="<?php the_permalink() ?>" rel="bookmark" title="Enlace permanente">#</a>
-          <?php edit_post_link('Editar', ' | ', ''); ?>  
-        </div>
-      </div>
+        <footer>
+          <small>
+            Categor&iacute;a: <?php the_category(', ') ?> | 
+            <a href="<?php the_permalink() ?>" rel="bookmark" title="Enlace permanente">#</a>
+            <?php edit_post_link('Editar', ' | ', ''); ?>  
+          </small>
+        </footer>
+
+      </article>
 
 <?php 
     if ($count == 1)
@@ -84,31 +87,31 @@ if (have_posts()) :
   } 
   endwhile; 
 
-  if ($es_miniblog == true) 
+  if ($is_miniblog == true) 
   { 
-    $es_miniblog = false; 
-    echo '</ul></div>';
+    $is_miniblog = false; 
+    echo '</ul></article>';
     echo '<div id="google_ad">'.google_ad_code().'</div>';       
   } 
 ?>
 
-    <div class="navigation">
-      <div class="navigation-left"><?php next_posts_link('&laquo; Entradas m&aacute;s antiguas') ?></div>
-      <div class="navigation-right"><?php previous_posts_link('Entradas m&aacute;s actuales &raquo;') ?></div>
+    <div class="nb-pagination">
+      <div class="previous"><?php next_posts_link('&laquo; Entradas m&aacute;s antiguas') ?></div>
+      <div class="next"><?php previous_posts_link('Entradas m&aacute;s actuales &raquo;') ?></div>
     </div>
 
 <?php 
   else : 
 ?>
 
-  <div class="post" >
+  <article class="nb-post" >
     <h2>No encontrado</h2>
     <p>Lo sentimos, pero est&aacute;s buscando algo que no est&aacute; aqu&iacute;.</p>
-  </div>
+  </article>
 
 <?php endif; ?>
 
-</div> <!-- fin de main -->
+</section> <!-- fin de main -->
 
 <?php get_sidebar(); ?>
 
