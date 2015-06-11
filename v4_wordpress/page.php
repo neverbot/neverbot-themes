@@ -28,9 +28,6 @@ if (have_posts()) :
     </footer>
   </article>
 
-  <!-- Google ads -->
-  <?php echo '<div id="google_ad">'.google_ad_code().'</div>'; ?>
-
   </section>
   
 <?php endwhile; else: ?>

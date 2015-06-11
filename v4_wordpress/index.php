@@ -10,7 +10,7 @@ $count = 1;
 
 if (have_posts()) : 
 
- echo '<div id="google_ad">'.google_ad_code().'</div>';       
+ // echo '<div id="google_ad">'.google_ad_code().'</div>';       
 
  while (have_posts()) : 
   the_post(); 
@@ -44,7 +44,7 @@ if (have_posts()) :
     { 
       $is_miniblog = false; 
       echo '</ul></article>';
-      echo '<div id="google_ad">'.google_ad_code().'</div>';       
+      // echo '<div id="google_ad">'.google_ad_code().'</div>';       
     } 
 
     ?>
@@ -81,8 +81,8 @@ if (have_posts()) :
       </article>
 
 <?php 
-    if ($count == 1)
-      echo '<div id="google_ad">'.google_ad_code().'</div>';       
+    // if ($count == 1)
+    //   echo '<div id="google_ad">'.google_ad_code().'</div>';       
     $count++;
   } 
   endwhile; 
@@ -91,7 +91,7 @@ if (have_posts()) :
   { 
     $is_miniblog = false; 
     echo '</ul></article>';
-    echo '<div id="google_ad">'.google_ad_code().'</div>';       
+    // echo '<div id="google_ad">'.google_ad_code().'</div>';       
   } 
 ?>
 

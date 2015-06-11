@@ -14,10 +14,6 @@ get_header();
     <h3 class="center">Deja de buscar porno</h3>
   </article>
 
-  <!-- Google ads -->
-  <?php echo '<div id="google_ad">'.google_ad_code().'</div>'; ?>
-
-
 </section> <!-- fin page -->
 
 

@@ -35,8 +35,8 @@ if (have_posts()) :
 
 <?php 
 
-  if ($count == 1)
-    echo '<div id="google_ad">'.google_ad_code().'</div>';       
+  // if ($count == 1)
+  //   echo '<div id="google_ad">'.google_ad_code().'</div>';       
   $count++;
    
   endwhile; 

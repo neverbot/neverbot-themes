@@ -45,10 +45,6 @@ if (have_posts()) :
       <div class="next">(mensaje siguiente) <?php next_post_link('%link &raquo;') ?></div>
     </div>
 
-    <!-- Google ads -->
-    <?php echo '<div id="google_ad">'.google_ad_code().'</div>'; ?>
-
-
 </section> <!-- fin page -->
 
 <?php endwhile; else: ?>
