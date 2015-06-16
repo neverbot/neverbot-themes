@@ -1,10 +1,22 @@
 <!DOCTYPE HTML>
 
 <!--
-  by Ivan Alonso (@neverbot)
+  Made by Ivan Alonso (@neverbot)
 
   Based on the Astral Template by HTML5 UP (@n33co)
   License: Creative Commons Attribution 3.0
+
+  Some places where I took ideas from:
+  (take a look too, it's the better way to learn)
+
+  Protrait effect:
+  http://codepen.io/maxme/pen/AobLn
+
+  Image halo effect:
+  http://jsfiddle.net/zcPVj/22/
+
+  Typewriter:
+  http://themes.playnethemes.com/mayde/
 -->
 
 <html>
@@ -15,7 +27,6 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="css/style.css" />
-  <script src="js/jquery.min.js">  </script>  
 
 </head>
 
@@ -38,38 +49,44 @@
     <div id="main">
 
       <article id="me" class="panel" data-key="home">
-        <header>
+        <section class="text-wrapper">
           <h1>Iván Alonso</h1>
-          <p>Imaginaut</p>
-        </header>
+          <p><span id="text-animated"></span><span class="typed-cursor">|</span></p>
+        </section>
+        <section class="photo-wrapper">
+          <div class="photo">
+            <img />
+          </div>
+          <div class="photo-ring">
+          </div>
+        </section>
       </article>
 
       <article id="work" class="panel" style="display:none;" data-key="work">
-        <header>
-          <h2>Work</h2>
-        </header>
-        <p>
-          Phasellus enim sapien, blandit ullamcorper elementum eu, condimentum eu elit.
-          Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia
-          luctus elit eget interdum.
-        </p>
-        <p>
-        Test
-        </p>
+        <section class="text-wrapper">
+          <header>
+            <h1>Work</h1>
+          </header>
+          <p>
+            Contact me if you are interested.
+          </p>
+        </section>
       </article>
 
       <article id="contact" class="panel" style="display:none;" data-key="contact">
-        <header>
-          <h2>Contact Me</h2>
-        </header>
-        <p>
-          Phasellus enim sapien, blandit ullamcorper elementum eu, condimentum eu elit.
-          Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia
-          luctus elit eget interdum.
-        </p>
-        <p>
-        Test
-        </p>
+        <section class="text-wrapper">
+          <header>
+            <h1>Contact Me</h1>
+          </header>
+          <p>
+            You can use <a href="http://twitter.com/neverbot">Twitter</a> 
+            or <a href="http://www.linkedin.com/in/ivanalonso">LinkedIn</a>.
+          </p>
+          <p>
+            I guess you expected some kind of form here, but this is not 1997 anymore.
+            Let's build a better web.
+          </p>
+        </section>
       </article>
 
     </div>
@@ -80,39 +97,8 @@
 
   </div>
 
-  <script type="text/javascript">
-
-    $(window).load(function() {
-
-      $('.icon').on('click', function() {
-
-        // ignore current panel
-        if ($(this).hasClass('active') === true)
-          return;
-
-        var origin = $(this);
-
-        // select the panel with the same data-key
-        var panel = $('.panel').filter(function() { 
-          return $(this).data('key') == origin.data('key');
-        });
-        
-        // if there is a destination panel
-        if (panel.length > 0)
-        {
-          // hide every panel
-          $('.panel').fadeOut(250);
-
-          // show the panel with the same data-key
-          panel.fadeIn(250);
-
-          $('.icon.active').removeClass('active');
-          $(this).addClass('active');
-        }
-      });
-    });
-
-  </script>
+  <script src="js/jquery.min.js">  </script>  
+  <script type="text/javascript" src="js/main.js"></script>
 
 </body>
 </html>
