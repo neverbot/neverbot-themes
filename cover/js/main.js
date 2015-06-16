@@ -11,7 +11,7 @@
                        'Mad Scientist',
                        'Software Artisan',
                        'I\'m (often) awesome',
-                       'Game Designer', ];
+                       'Game Designer' ];
   var currentMessage = '';
   var currentMessageAction = 0; // 0 removing characters, 1 adding characters
 
