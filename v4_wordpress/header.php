@@ -38,7 +38,7 @@ include_once('nb_funcs.php');
   <header>
     <div class="nb-head hidden-xs">
       <div class="nb-main-logo">
-        <a href="http://www.neverbot.com">neverbot</a>
+        <a href="http://blog.neverbot.com">neverbot</a>
       </div> 
     </div>
   </header>
