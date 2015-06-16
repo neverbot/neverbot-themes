@@ -81,7 +81,7 @@
       // change img src
       case 1:
         elem.children('img').attr('src', 'images/photos/' + photoCollection[Math.floor(Math.random()*photoCollection.length)]);
-        delay = 1;
+        delay = 1000;
         break;
       // fade in
       case 2: 
