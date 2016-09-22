@@ -1,3 +1,5 @@
+*.DS_Store
+._*
 
-composer.lock
-vendor/*
+deploy.sh
+exclude.txt
