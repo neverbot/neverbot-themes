@@ -1,4 +1,4 @@
 blog.neverbot.com
 =================
 
-Theme for blog.neverbot.com
+WordPress theme for blog.neverbot.com
