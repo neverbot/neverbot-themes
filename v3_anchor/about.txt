@@ -1,0 +1,5 @@
+Theme name:    neverbot
+Description:   This is the default, shiny theme for Anchor CMS.
+Author name:   neverbot
+Author site:   http://neverbot.com
+License:       (c) neverbot 2014

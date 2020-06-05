@@ -1,0 +1,410 @@
+/*  
+  Theme Name: Neverbot v3
+  Theme URI: http://neverbot.com/
+  Description: Theme used in neverbot.com
+  Version: 2.0
+  Author: Iv&aacute;n Alonso
+  Author URI: http://neverbot.com
+*/
+
+/* header */
+
+/* navigation bar */
+.nb-navbar button {
+  width: 40px;
+}
+  .nb-navbar .nb-logo {
+    font-family: 'hamburguer_heaven', georgia, sans-serif;
+    font-size: 20pt;  
+  }
+  .nb-navbar .navbar-form {
+    border-top: none;
+    border-bottom: none;
+    padding: 0;
+  }
+  .in .navbar-form,
+  .collapsing .navbar-form {
+    padding: 0 15px;
+  }
+
+/* logo */
+.nb-head {
+  width: 80%;
+  margin: 20px auto;  
+  height: 330px;
+  background: url('../img/background_header.gif') no-repeat top center;
+  margin: 0px auto 0px auto; 
+}
+  .nb-main-logo {
+    font-family: 'hamburguer_heaven', georgia, sans-serif;
+    font-size: 8em;
+    color: black;
+    margin-left: 10%;
+  }
+  .nb-main-logo:hover{
+    text-decoration: none;
+    color: black;
+  }
+
+/* content */ 
+.nb-content {
+
+}
+
+/* post list */
+.nb-items {
+  list-style: none;
+  padding: 0;
+}
+
+/* post */
+article, .nb-post {
+  font: 18px georgia;
+  color: #333;
+  background-color: #fff;  
+  line-height: 1.5em;
+  width: 80%;
+  margin: 20px auto;  
+  border: 1px solid #8D8D8D;
+  border-radius: 15px;  
+  padding: 20px;
+  max-width: 1000px;
+}
+  article a {
+    border-bottom: 1px solid rgba(255, 102, 153, 0.5);
+    box-shadow: inset 0 -4px 0 rgba(255, 102, 153, 0.5);
+    color: inherit;
+  }
+    /* not in linked images */
+    article a[href$=jpg], article a[href$=jpeg], 
+    article a[href$=jpe], article a[href$=png], 
+    article a[href$=gif] {
+      text-decoration: none;
+      border: 0 none;
+      border-bottom: 0px;
+      box-shadow: inherit;
+    }
+    article a:hover {
+      text-decoration: none; 
+      color: rgba(255, 102, 153, 0.7);
+      border-bottom: 0px;
+      box-shadow: inherit;  
+    }
+  article header {
+    margin-bottom: 20px;
+  }
+    article header a, article footer a {
+      border-bottom: 0px;
+      box-shadow: inherit;
+    }
+  article h1 {
+    font: 18px georgia;  
+    font-weight: bold;
+    margin: 0px;
+  }
+    article h1 a:link, article h1 a:visited { 
+      text-decoration: underline; 
+      color: #333333;
+    }
+    article h1 a:hover, article h1 a:active { 
+      text-decoration: none; 
+      color: #333333;
+    }
+  article img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    margin: 5px;
+    padding: 3px;
+    border: 1px solid #8D8D8D;   
+  }
+  /* fix for old wordpress posts */
+  article .alignnone {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-top: 30px;
+    margin-bottom: 15px;  
+  }
+
+  /* post head and foot */
+  article small {    
+    font-size: 0.9em;
+    line-height: 1.5em;
+    color: #777;
+  }
+
+/* pagination */
+.nb-pagination {
+  background-color: #fff;  
+  line-height: 1.5em;
+  width: 80%;
+  margin: 20px auto;    
+  padding: 20px;
+  max-width: 1000px;    
+}
+  .nb-pagination a {
+    font: 18px georgia;  
+    font-weight: bold;
+    color: #333;
+    text-decoration: underline;
+  }
+  .nb-pagination a:hover {
+    text-decoration: none;
+  }
+  .nb-pagination .previous {
+    float: left;
+  }
+  .nb-pagination .next {
+    float: right;
+  }
+
+/* footer */
+.nb-footer {
+  font: 18px georgia;  
+  line-height: 1.5em;
+  width: 80%;
+  margin: 20px auto;  
+  border: 1px solid #8D8D8D;
+  border-radius: 15px;  
+  padding: 40px;
+  max-width: 1000px;  
+}
+  .nb-footer i {
+    padding: 0 5px;
+  }
+  .nb-footer img {
+    margin: 5px;
+    padding: 3px;
+    border: 1px solid #8D8D8D;   
+
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    margin: 5px;
+    padding: 3px;
+    border: 1px solid #8D8D8D;   
+
+  }
+  .nb-footer ul {
+    /* padding: 20px 0 0 20px; */
+  }
+  .nb-footer li {
+    list-style: none;
+    padding: 0;    
+  }
+  .nb-footer a {
+    border-bottom: 1px solid rgba(255, 102, 153, 0.5);
+    box-shadow: inset 0 -4px 0 rgba(255, 102, 153, 0.5);
+    color: inherit;
+  }
+    .nb-footer a:hover {
+      text-decoration: none; 
+      color: rgba(255, 102, 153, 0.7);
+      border-bottom: 0px;
+      box-shadow: inherit;  
+    }
+
+  .sidebar {
+    margin: 0px auto 0px auto;
+    width: 1000px;
+  }
+
+  .sidebar-categories {
+    margin: 0 0 20px 0;
+  }
+
+  .sidebar-columns {
+    overflow: auto;
+    width: 100%
+  }
+  .sidebar-left {
+    padding: 0;
+  }
+    .sidebar-left ul {
+      padding: 20px 0 0 20px; 
+    }
+    .sidebar-left li a {
+      border-bottom: 0px;
+      box-shadow: inherit;
+      text-decoration: underline;
+      color: inherit;
+    }
+
+  .sidebar-right {
+    padding: 0;
+  }
+
+.nb-colophon {
+  font: 18px georgia;  
+  line-height: 1.5em;
+  margin: 0px auto 0px auto;
+  padding: 10px 50px 50px 50px;
+  width: 100%;
+  text-align: center;
+}
+  .nb-colophon a {
+    border-bottom: 1px solid rgba(255, 102, 153, 0.5);
+    box-shadow: inset 0 -4px 0 rgba(255, 102, 153, 0.5);
+    color: inherit;
+  }
+  .nb-colophon a:hover {
+    text-decoration: none;
+    color: rgba(255, 102, 153, 0.7);
+    border-bottom: 0px;
+    box-shadow: inherit;  
+  }
+
+/* comment list */
+
+ul.commentlist {
+  margin-bottom: 40px;
+  padding: 0 30px;
+  list-style: none;
+}
+  ul.commentlist .wrap {
+    position: relative;
+  }
+  ul.commentlist li {
+    padding: 40px 0;
+    border-bottom: 1px solid rgba(22,36,54,.1);
+  }
+    ul.commentlist li header {
+      margin-bottom: 20px;
+    }
+    ul.commentlist small {
+      font-size: 0.9em;
+      line-height: 1.5em;
+      color: #777;
+    }
+      ul.commentlist small a {
+        color: inherit;
+      }
+      ul.commentlist small a:hover, 
+      ul.commentlist small a:active { 
+        text-decoration: none; 
+        color: rgb(255, 102, 153);
+      }    
+
+
+    ul.commentlist h2 {
+      font: 18px georgia;
+      font-weight: bold;
+      margin: 0px;
+    }
+      ul.commentlist h2 a:link, 
+      ul.commentlist h2 a:visited { 
+        text-decoration: underline; 
+        color: #333333;
+      }
+      ul.commentlist h2 a:hover, 
+      ul.commentlist h2 a:active { 
+        text-decoration: none; 
+        color: #333333;
+      }    
+    ul.commentlist .counter {
+      position: absolute;
+      right: 0;
+      top: 0;
+
+      font-size: 40px;
+      font-weight: 300;
+      color: #cdd2da;
+    }
+
+/* comment form, same styles as in the default anchor theme */
+
+#comment {
+  overflow: hidden;
+}
+  #comment label[for] {
+    display: none;
+  }
+  #comment p {
+    float: left;
+    width: 48%;
+    margin-right: 4%;
+    margin-bottom: 10px;
+
+    text-indent: 0;
+  }
+    #comment p + p {
+      margin-right: 0;
+    }
+    #comment p.textarea {
+      float: none;
+      width: 100%;
+    }
+  #comment input, #comment textarea {
+    width: 100%;
+    padding: 10px 15px;
+
+    font-size: 15px;
+    font-weight: normal;
+
+    border: 1px solid rgba(22,36,54,.2);
+    border-radius: 4px;
+  }
+   #comment input:focus, #comment textarea:focus {
+      outline: none;
+      background: #f7f9fc;
+    }
+    #comment textarea {
+      min-height: 150px;
+      max-height: 800px;
+      resize: vertical;
+    }
+  #comment button {
+    display: inline-block;
+    padding: 9px 18px;
+
+    background: rgba(255, 102, 153, 0.7);
+    color: #fff;
+
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+    font: 18px georgia;
+  }
+    #comment button:hover {
+      background: rgb(255, 102, 153);
+    }
+
+/* search */
+
+.nb-search-results {
+}
+  .nb-search-results li {
+    margin-bottom: 20px;
+    list-style: none;
+  }
+  .nb-search-results h2 {
+    font: 18px georgia;  
+    margin: 0px;
+  }
+  .nb-search-results small {
+    margin-left: 20px;  
+  }
+
+/* global */
+
+.nb-center { text-align: center; }
+.nb-left { float: left; }
+.nb-right { float: right; }
+
+/* fonts */
+
+@font-face {
+  font-family: 'hamburguer_heaven';
+  src: url('../fonts/hamburguer_heaven.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* mobile fixes */
+
+@media (max-width: 767px){
+  .nb-post { width: 95%; }
+  .nb-footer { width: 95%; }
+}
