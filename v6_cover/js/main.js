@@ -2,7 +2,7 @@
 ;(function(){
 
   var photoCollection = [ '001.jpg', '002.jpg', '003.jpg', '004.jpg', '005.jpg',
-                          '006.jpg', '007.jpg', '008.jpg', '009.jpg', '010.jpg',
+                          '006.jpg', '007.jpg', '008.jpg', '009.png', '010.png',
                           '011.jpg' ];
   var currentPhotoPhase = 0;
 
@@ -90,7 +90,7 @@
         break;
       // wait a little bit
       case 3:
-        delay = 12000;
+        delay = 6000;
         break;
     }
 
